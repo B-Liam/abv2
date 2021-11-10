@@ -1,3 +1,59 @@
+<style>
+
+h1 {
+    text-align: center;
+  }
+
+  .user-info {
+    align-items: center;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    padding: 0;
+  }
+
+  .user-info button {
+    background: var(--dark-gray);
+    border: 0;
+    border-radius: 0.5rem;
+    color: var(--white);
+    display: block;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .corgi-content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .content-display {
+    margin: 0;
+  }
+
+  .credit {
+    display: block;
+    font-size: 0.75rem;
+  }
+
+  .content img {
+    width: 100%;
+  }
+
+</style>
+
+
 <h1>Login Page</h1>
 
 <h2>Handle Subscriptions Tutorial</h2>
@@ -19,7 +75,8 @@
     const button2 = document.getElementById('right'); 
 
     const login = () => netlifyIdentity.open('login');
-    const signup = () => netlifyIdentity.open('signup');  
+    const signup = () => netlifyIdentity.open('signup'); 
+
     // by default, add login and signup functionality
     button1.addEventListener('click', login);
     button2.addEventListener('click', signup);
@@ -76,7 +133,7 @@
   netlifyIdentity.on('init', handleUserStateChange);
   netlifyIdentity.on('login', handleUserStateChange);
   netlifyIdentity.on('logout', handleUserStateChange);
-  
+
   };
 
 </script>
