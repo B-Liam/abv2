@@ -1,6 +1,6 @@
 <style>
     .netlify-identity-button {
-      background: var(--pink);
+      background: pink;
       border: 0;
       border-radius: 0.25rem;
       color: var(--white);
@@ -17,25 +17,29 @@
       width: 300px;
     }
   </style>
+<h1>Login Page</h1>
+<div data-netlify-identity-button></div>
   
-  <div data-netlify-identity-button></div>
-  
-  <script
-    type="text/javascript"
-    src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-  ></script>
-  
-  <script>
-    function handleLogin(user) {
-      if (!user || !user.token) {
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<script>
+
+function handleLogin(user) {
+
+    if (!user || !user.token ) {
         return;
-      }
-  
-      // if we get here, we have an active user; redirect to the admin page!
-      window.location.pathname = '/admin/';
     }
-  
-    window.netlifyIdentity.on('init', handleLogin);
-    window.netlifyIdentity.on('login', handleLogin);
-  </script>
-  
+    //if the person gets to this line, it means they are logged in (ie is a user, and has a token)
+    //therefore, send the person to the logged in page
+
+    window.location.pathname = '/premium-content';
+
+}
+
+//on page load, if a person is already logged in and goes to this page, this will redirect them to the logged in page
+window.netlifyIdentity.on('init', handleLogin);
+//after someone is logged in, this calls the function to redirect them
+window.netlifyIdentity.on('login', handleLogin);
+
+
+</script>
