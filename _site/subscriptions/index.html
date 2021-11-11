@@ -14,7 +14,7 @@ h1 {
   }
 
   .user-info button {
-    background: var(--dark-gray);
+    background: pink;
     border: 0;
     border-radius: 0.5rem;
     color: var(--white);
@@ -119,7 +119,17 @@ h1 {
 
         b2.innerText = 'Manage Subscription';
         b2.addEventListener('click', () => {
-        // TODO handle subscription management
+          fetch('/.netlify/functions/create-manage-link', {
+            method: 'POST',
+            headers: {
+            Authorization: `Bearer ${user.token.access_token}`,
+            },
+            })
+            .then((res) => res.json())
+            .then((link) => {
+            window.location.href = link;
+            })
+            .catch((err) => console.error(err));
     });
     } else {
         // if no one is logged in, show login/signup options
