@@ -23,7 +23,6 @@ exports.handler = async (_event, context) => {
     customer: stripeID,
     return_url: process.env.URL,
   });
-console.log(link)
   return {
     statusCode: 200,
     body: JSON.stringify(link.url),
