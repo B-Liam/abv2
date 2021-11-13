@@ -10,8 +10,22 @@ layout: /layouts/base.njk
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}">
 
-<!-- I need CSS styles to go in here: Navigation; Footer; General -->
-<link rel="stylesheet" href="/css/general.css">
+<style>
+
+/* some words*/
+{% include 'css/general.css' %}
+
+/* Mobile Styles */
+@media only screen and (max-width: 767px) {
+{% include 'css/mobile-header.css' %}
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 768px) {
+{% include 'css/desktop-header.css' %}
+}
+
+</style>
 
 </head>
 

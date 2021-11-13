@@ -6,16 +6,73 @@ layout: /layouts/head.njk
 
 <body>
 <header>
-    a navigation bar
-    <h1> a page title </h1>     
+
+
+<div id="mobile-header">
+        <div id="logo">
+            <img style="width:60vw" src="/images/uploads/allotment-book-logo.svg" alt="allotment-book-logo"/>
+        </div>
+        <div id="menu-button" class="pointer">
+            <a href"/"><img style="height:18px;padding-top:5px" src="/images/uploads/hamburger-icon.svg"/>
+            <div style="font-size:0.8em">Contents</div></a>
+        </div>
+
+        <div id="myNav" class="overlay">
+       <div style="text-align:right" class="closebtn"> <i id="close" class="fas fa-window-close"></i></div>
+            <div id="nav-grid"
+                    <div id="first-row" style="color:#ffffff;">
+                    <div id="col-left"><a href="/"><i class="fas fa-home"></i> Home</div></a>
+                    <div id="col-right"></div>
+                    <div id="second-row">
+                        <div id="col-left"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a>
+                        <div id="col-right"><a href="/"><i class="fas fa-power-off"></i> Account</div></a>
+                    </div>
+                    <div id="third-row-a">
+                    <div><a href="/"><i class="fas fa-book-open"></i> Book Contents</div></a>
+                    </div>
+                    <div id="third-row-b">
+                        <div id="col-left-third"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a>
+                        <div id="col-right-third"><a href="/"><i class="fas fa-power-off"></i> Account</div></a>
+                    </div>
+                    <div id="fourth-row">
+                        <div id="col-left">something</div>
+                        <div id="col-right"></div>
+                    </div>
+                    <div id="fifth-row">
+                        <div id="col-left"></div>
+                        <div id="col-right"></div>
+                    </div>
+                    <div id="sixth-row">
+                        <div id="col-left"></div>
+                        <div id="col-right"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+<div id="desktop-header">
+Some desktop words
+</div>
+
+<h1> ab page title </h1>     
 </header>
 
-The layout above should specify the page template used for this specific page
+<p>A paragraph of words</p>
 
-The main html
+<i class="fas fa-check-circle"></i>
 
 <footer>The footer</footer>
 
+<script src="/js/open-nav.js"></script>
+<script src="/js/close-nav.js"></script>
 <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></link>
 
 </body>
