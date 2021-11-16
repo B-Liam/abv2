@@ -15,9 +15,9 @@
 
 <style>
 
-/* some words*/
+/* some words */
 body {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0 0 0 0;
 }
 
@@ -25,9 +25,34 @@ body {
     font-size: 10px;
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 767px) {
-#desktop-header {
+#non-mobile {
+    text-align: left;    
+}
+
+#non-mobile .fas {
+    padding-right: 0.5em;    
+}
+
+#non-mobile a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#non-mobile #row {
+    border-bottom: solid 2px #ffffff;
+    padding-top: 2%;
+    padding-left: 20%; 
+}
+
+#nav-elements {
+    padding: 1% 0 3% 0; 
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+#tablet-desktop-header{
     display: none;
 }
 
@@ -50,15 +75,19 @@ body {
 }
 
 #nav-grid a {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#nav-grid a:hover {
+    background: #ffffff;
 }
 
 #first-row {
     grid-area: 1/1/2/2;
     display: grid;
     grid-template-columns: 2fr;
-    background: #009900;
-    
+    background: #009900
 }
 
 #col-left {
@@ -110,7 +139,9 @@ body {
     background: #ffffff;
     color: #009900;
     text-align: center;
-    padding-top: 2%;
+    padding-top: 3%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 #third-row-a a {
@@ -122,6 +153,9 @@ body {
     display: grid;
     background: #ffffff;
     color: #009900;
+    padding-left: 8%;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 #third-row-b a {
@@ -131,13 +165,21 @@ body {
 #fourth-row {
     grid-area: 5/1/6/3;
     display: grid;
-    grid-template-columns: 50% 50%;
+    background:#e0f7d3;
+}
+
+#fourth-row a {
+    color: #009900;
 }
 
 #fifth-row {
     grid-area: 6/1/7/3;
     display: grid;
-    grid-template-columns: 50% 50%;
+    background:#e0f7d3;
+}
+
+#fifth-row a {
+    color: #009900;
 }
 
 #sixth-row {
@@ -148,8 +190,8 @@ body {
 
 
 #menu-button {
-    margin: 10px 10px 10px 10px;
-    padding: 10px 0 10px 0;
+    margin: 5% 15% 2% 2%;
+    padding: 7px 10px 7px 7px;
     grid-area: menu;
     color: #ffffff;
     background: #009900;
@@ -213,14 +255,173 @@ body {
     font-size: 1.5em;
 }
 
+#content-container {
+    display: grid;
+    grid-template-areas:
+    "main";
+    grid-template-columns: auto;
+}
+
+#leftnav {
+    display: none; 
+}
+
+#main-column {
+    grid-area: main;
+    background: #ffffff;
+}
+
+#sidebar {
+    display: none;
+}
+
+#content-body {
+    padding-left: 5%;
+    padding-right: 5%
+}
+
+
 
 }
 
-/* Desktop styles */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 951px) and (max-width: 1199px) {
+
 #mobile-header {
     display: none;
 }
+
+#tablet-desktop-header {
+    display: grid;
+    grid-template-areas:
+    "left main";
+    grid-template-columns: auto 700px;
+}
+
+#left {
+    grid-area: left;
+    background: #009900;
+    border-bottom: solid 2px #ffffff;
+}
+
+#main {
+    grid-area: main;
+    background: #ffffff;
+}
+
+#content-body {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#side {
+    display: none;
+}
+
+#tablet-desktop-logo {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-container {
+    display: grid;
+    grid-template-areas:
+    "nav main";
+    grid-template-columns: auto 700px;
+}
+
+#leftnav {
+    grid-area: nav;
+    background: #009900; 
+}
+
+#main-column {
+    grid-area: main;
+    background: #ffffff;
+}
+
+#sidebar {
+    display: none;
+}
+
+
+
+
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+
+#mobile-header {
+    display: none;
+}
+
+#tablet-desktop-header {
+    display: grid;
+    grid-template-areas:
+    "left main side";
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+#left {
+    grid-area: left;
+    background: #009900;
+    border-bottom: solid 2px #ffffff;
+    
+}
+
+#main {
+    grid-area: main;
+    background: #ffffff;
+}
+
+#content-body {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+#side {
+    grid-area: side;
+    background: #e0f7d3;
+}
+
+#tablet-desktop-logo {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-container {
+    display: grid;
+    grid-template-areas:
+    "nav main sidebar";
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+#leftnav {
+    grid-area: nav;
+    background: #009900;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+
+}
+
+#main-column {
+    grid-area: main;
+    background: #ffffff;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background: #e0f7d3;
+}
+
+
+
 }
 
 </style>
@@ -229,75 +430,147 @@ body {
 
 
 <body>
+
 <header>
 
-
-<div id="mobile-header">
+    <div id="mobile-header">
         <div id="logo">
-            <img style="width:60vw" src="/images/uploads/allotment-book-logo.svg" alt="allotment-book-logo"/>
-        </div>
-        <div id="menu-button" class="pointer">
-            <a href"/"><img style="height:18px;padding-top:5px" src="/images/uploads/hamburger-icon.svg"/>
-            <div style="font-size:0.8em">Contents</div></a>
-        </div>
+    <img style="width:70vw;padding-top:7px;" src="/images/uploads/allotment-book-logo.svg" alt="allotment-book-logo"/>
+</div>
+<div id="menu-button" class="pointer">
+    <a href"/"><img style="height:16px;padding-top:5px" src="/images/uploads/hamburger-icon.svg"/>
+    <div style="font-size:0.7em">Contents</div></a>
+</div>
 
-        <div id="myNav" class="overlay">
-       <div style="text-align:right" class="closebtn"> <i id="close" class="fas fa-window-close"></i></div>
-            <div id="nav-grid"
-                    <div id="first-row" style="color:#ffffff;">
-                    <div id="col-left"><a href="/"><i class="fas fa-home"></i> Home</div></a>
-                    <div id="col-right"></div>
-                    <div id="second-row">
-                        <div id="col-left"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a>
-                        <div id="col-right"><a href="/"><i class="fas fa-power-off"></i> Account</div></a>
-                    </div>
-                    <div id="third-row-a">
-                    <div><a href="/"><i class="fas fa-book-open"></i> Book Contents</div></a>
-                    </div>
-                    <div id="third-row-b">
-                        <div id="col-left-third"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a>
-                        <div id="col-right-third"><a href="/"><i class="fas fa-power-off"></i> Account</div></a>
-                    </div>
-                    <div id="fourth-row">
-                        <div id="col-left">something</div>
-                        <div id="col-right"></div>
-                    </div>
-                    <div id="fifth-row">
-                        <div id="col-left"></div>
-                        <div id="col-right"></div>
-                    </div>
-                    <div id="sixth-row">
-                        <div id="col-left"></div>
-                        <div id="col-right"></div>
-                </div>
-
+<nav id="myNav" class="overlay">
+    <div style="text-align:right" class="closebtn"> <i id="close" class="fas fa-window-close"></i></div>
+    <div id="nav-grid"
+            <div id="first-row">
+            <div id="col-left"><a href="/"><i class="fas fa-home"></i> Home</div></a>
+            <div id="col-right"></div>
+            <div id="second-row">
+                <div id="col-left"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a>
+                <div id="col-right"><a href="/"><i class="fas fa-power-off"></i> Account</div></a>
             </div>
-        </div>
+            <div id="third-row-a">
+            <div><a href="/"><i class="fas fa-book-open"></i> Book Contents</div></a>
+            </div>
+            <div id="third-row-b">
+                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Introduction</a>
+                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Allotment Starter Guides</a>
+                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Vegetable Growing Guides</a>
+                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Fruit Growing Guides</a>
+                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Herb Growing Guides</a>
+                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Allotment Recipes</a>
+            </div>
+            <div id="fourth-row">
+                <div id="col-left"><a href="/"><i class="far fa-calendar-alt"></i> Planning Tools</div></a>
+                <div id="col-right"><a href="/"><i class="fas fa-video"></i> Videos</div></a>
+            </div>
+            <div id="fifth-row">
+                <div id="col-left"><a href="/"><i class="fas fa-camera"></i> Photo Gallery</div></a>
+                <div id="col-right"><a href="/"><i class="fas fa-pen"></i> Blog</div></a>
+            </div>
+            <div id="sixth-row">
+                <div id="col-left"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a>
+                <div id="col-right"><a href="/"><i class="fas fa-copy"></i> Policies</div></a>
+            </div>
+
+    </div>
+</nav>
+    </div>
+
+    <div id="tablet-desktop-header">
+        <div id="left">
+    <div></div>
+</div>
+
+<div id="main">
+
+    <div id="tablet-desktop-logo">
+
+    <img style="height:40px" src="/images/uploads/allotment-book-logo.svg" alt="allotment-book-logo"/>
+
     </div>
     
 </div>
 
-
-
-
-<div id="desktop-header">
-Some desktop words
+<div id="side">
+    <div></div>
 </div>
+    </div>
 
-<h1> ab page title </h1>     
 </header>
 
-<p>A paragraph of words</p>
+<div id="content-container">
 
-<i class="fas fa-check-circle"></i>
+        <div id="leftnav">
+            <nav id="non-mobile">
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Account</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Introduction</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Allotment Starter Guides</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Vegetable Growing Guides</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Fruit Growing Guides</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Herb Growing Guides</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Allotment Recipes</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Planning Tools</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Videos</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Photo Gallery</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Blog</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Policies</div></a></div>
+</nav>
+        </div>
 
-<footer>The footer</footer>
+        <div id="sidebar">
+            side
+        </div>
+    
+        <div id="main-column">
+        
+                <main id="main-content">
+                    
+                    <div id="content-heading">
+                        <img style="width:100%" src="/images/uploads/landscape-allotment.svg" alt="Drawing of an example allotment"/>
+                    </div>
 
-<script src="/js/open-nav.js"></script>
-<script src="/js/close-nav.js"></script>
-<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+                    <div id="content-body">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></link>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non vulputate nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec fringilla odio ut quam congue gravida. Donec id viverra dui. Mauris pellentesque sollicitudin odio ac vestibulum. Vestibulum porttitor tellus ac ligula porta, in egestas nunc rhoncus. Proin eleifend faucibus euismod. Mauris sodales est vitae tortor tincidunt, at fermentum tellus luctus. Pellentesque vel ligula et leo posuere elementum.
+
+                            Fusce sit amet ligula consectetur libero rutrum sollicitudin eu nec sem. Donec non est ac augue dapibus placerat. Suspendisse sodales, leo viverra ultrices gravida, nibh velit elementum ex, ac consectetur justo lacus et nibh. Quisque in sem a dolor hendrerit eleifend. Suspendisse eu eros porta, pretium felis eu, mollis libero. Nunc dapibus eros id tortor auctor sagittis eget sit amet orci. Nam sed justo mi. Integer maximus dignissim orci, id laoreet ante dictum aliquet. Aliquam rhoncus tincidunt libero pulvinar porttitor. Aenean non velit vitae enim facilisis dictum.
+                            
+                            Curabitur venenatis tempor pellentesque. Aenean nec molestie elit. Morbi eu elementum ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis eu massa felis. Integer tellus ante, eleifend pharetra sapien at, fermentum pellentesque libero. Aenean nec mi nisi.
+                            
+                            Morbi fermentum purus non metus gravida pretium. Integer gravida diam odio, quis egestas mauris consectetur eu. Aliquam magna tortor, vulputate et scelerisque a, pellentesque non neque. Etiam tristique nisl et nibh pharetra, at tincidunt nisi auctor. Morbi pellentesque nec enim quis pretium. Vivamus pharetra urna in vulputate varius. In at imperdiet nunc, non egestas dui. Nunc ac aliquam leo. Vestibulum lorem ligula, hendrerit eu neque id, ornare pretium urna. Duis et lobortis massa. Fusce sed nisi consectetur, hendrerit nibh a, euismod turpis. Cras id mauris lacinia, iaculis ipsum non, maximus nisi. Sed ornare massa tellus, in finibus nisi convallis quis. Aenean hendrerit, lorem at dictum vehicula, augue elit scelerisque erat, eget scelerisque augue tellus eget augue. Nam eu posuere augue. Phasellus in ex convallis augue consequat sollicitudin.
+                            
+                            Suspendisse molestie sem ex, vel pulvinar turpis efficitur sit amet. Quisque cursus nisi ac purus imperdiet, eu convallis dolor placerat. Suspendisse quis maximus diam. In eleifend, felis sit amet luctus congue, ex felis varius libero, in suscipit eros neque quis velit. Donec molestie nisl vitae tellus tincidunt, nec efficitur lacus lacinia. Aliquam cursus tristique varius. Praesent vitae velit elit. Mauris vehicula ut urna a commodo.
+                            
+                            Aenean ut porttitor risus, vitae tempor arcu. Etiam gravida libero quis purus aliquam aliquet. Quisque pellentesque fringilla nunc molestie laoreet. In non cursus dui. Nullam varius erat sagittis odio porta mattis. Nam molestie venenatis nulla, finibus consectetur arcu ultrices at. Donec finibus consequat diam ut aliquam. Mauris magna justo, ullamcorper nec hendrerit id, sodales et nisl. Curabitur eros ex, lacinia eget erat vitae, aliquam ullamcorper velit.
+                            
+                            Suspendisse et nisi eros. Nam turpis lacus, laoreet at libero et, scelerisque rhoncus leo. Cras eget libero eu augue pretium feugiat quis a erat. Nunc sagittis tincidunt purus ut vulputate. Sed ut placerat erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at commodo diam, id lacinia purus. Donec et suscipit libero. Maecenas molestie semper lacinia. Suspendisse posuere nisl sit amet tortor commodo, vel laoreet mauris tincidunt. Nam tristique dolor ut ex euismod tristique. Maecenas varius metus eu odio porttitor iaculis. Mauris tempus eget odio eu pretium.
+                            
+                            Vivamus non rutrum neque. Nam mollis libero enim, sed tristique nunc tempor nec. Nam ac tincidunt leo. Phasellus mauris velit, iaculis in vehicula vitae, sodales vitae neque. Quisque euismod, arcu in gravida lacinia, nisl nibh suscipit nunc, vel blandit tortor odio at libero. Duis accumsan pharetra erat vitae dapibus. Mauris lacinia dui vitae sapien accumsan, id euismod mauris egestas. Curabitur porttitor erat id rhoncus tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque mattis eget ex nec luctus.
+                            
+                            Curabitur tristique, neque nec mattis viverra, urna nisl ultrices arcu, feugiat laoreet lacus arcu sed quam. Morbi sagittis, libero eu scelerisque placerat, justo lorem luctus felis, non dignissim nunc justo vel magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin eget ultricies leo. Curabitur pellentesque eros justo, interdum elementum mauris auctor non. Phasellus cursus lacus quis commodo facilisis. Donec consequat, tortor sit amet ullamcorper blandit, nulla nisi fringilla massa, vel tristique nisi purus a enim. Cras quis posuere justo, id tincidunt tellus. Nunc imperdiet euismod ante, vitae gravida nisl tincidunt ac. Nullam vitae lectus augue. Fusce in fringilla dui, et auctor purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet eros sit amet mi semper egestas ut sit amet orci. Fusce ex tortor, congue non dui vitae, dictum pellentesque dolor. Donec vel accumsan lectus, ultricies pulvinar turpis. Suspendisse potenti.
+                            
+                            Nulla facilisi. Nullam ut lacinia massa, vitae tempor massa. Quisque in augue sem. Maecenas rhoncus lobortis magna, id scelerisque augue molestie id. Proin quis nulla libero. Cras nec augue id nunc maximus elementum. Donec eget nulla imperdiet mi sagittis eleifend at vitae nisi. In hac habitasse platea dictumst. Maecenas justo dolor, tincidunt sed viverra sit amet, vulputate vitae libero. Aliquam efficitur blandit consequat. Quisque varius vitae eros quis rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ante quam, tincidunt eu nisi euismod, tincidunt aliquam leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                    </div>
+
+                
+                
+                <i class="fas fa-check-circle"></i>
+                
+                </main>
+            </div>
+    </div>
+
+    <script src="/js/open-nav.js"></script>
+    <script src="/js/close-nav.js"></script>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></link>
 
 </body>
 
