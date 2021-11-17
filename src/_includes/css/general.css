@@ -1,6 +1,7 @@
 body {
     font-size: 18px;
     margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
 .fa-test {
@@ -26,7 +27,18 @@ body {
     padding-left: 20%; 
 }
 
+#non-mobile #book-indent #row {
+    border-bottom: solid 2px #ffffff;
+    padding-top: 2%;
+    padding-left: 28%; 
+}
+
 #nav-elements {
     padding: 1% 0 3% 0; 
+}
+
+#footer {
+    background: pink;
+    width: 100vw;
 }
 

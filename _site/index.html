@@ -19,6 +19,7 @@
 body {
     font-size: 18px;
     margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
 .fa-test {
@@ -44,8 +45,19 @@ body {
     padding-left: 20%; 
 }
 
+#non-mobile #book-indent #row {
+    border-bottom: solid 2px #ffffff;
+    padding-top: 2%;
+    padding-left: 28%; 
+}
+
 #nav-elements {
     padding: 1% 0 3% 0; 
+}
+
+#footer {
+    background: pink;
+    width: 100vw;
 }
 
 
@@ -413,6 +425,7 @@ body {
 #main-column {
     grid-area: main;
     background: #ffffff;
+    min-height: 100vh; 
 }
 
 #sidebar {
@@ -449,31 +462,31 @@ body {
             <div id="col-left"><a href="/"><i class="fas fa-home"></i> Home</div></a>
             <div id="col-right"></div>
             <div id="second-row">
-                <div id="col-left"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a>
-                <div id="col-right"><a href="/"><i class="fas fa-power-off"></i> Account</div></a>
+                <div id="col-left"><a href="/shop"><i class="fas fa-shopping-bag"></i> Shop</div></a>
+                <div id="col-right"><a href="/subscriptions"><i class="fas fa-power-off"></i> Account</div></a>
             </div>
             <div id="third-row-a">
-            <div><a href="/"><i class="fas fa-book-open"></i> Book Contents</div></a>
+            <div><a href="/book-contents"><i class="fas fa-book-open"></i> Book Contents</div></a>
             </div>
             <div id="third-row-b">
-                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Introduction</a>
-                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Allotment Starter Guides</a>
-                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Vegetable Growing Guides</a>
-                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Fruit Growing Guides</a>
-                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Herb Growing Guides</a>
-                <a style="margin-top:-3%" href="/"><i class="fas fa-chevron-circle-right"></i></i> Allotment Recipes</a>
+                <a style="margin-top:-3%" href="/introduction"><i class="fas fa-chevron-circle-right"></i></i> Introduction</a>
+                <a style="margin-top:-3%" href="/allotment-starter-guides"><i class="fas fa-chevron-circle-right"></i></i> Allotment Starter Guides</a>
+                <a style="margin-top:-3%" href="/vegeteble-growing-guides"><i class="fas fa-chevron-circle-right"></i></i> Vegetable Growing Guides</a>
+                <a style="margin-top:-3%" href="/fruit-growing-guides"><i class="fas fa-chevron-circle-right"></i></i> Fruit Growing Guides</a>
+                <a style="margin-top:-3%" href="/herb-growing-guides"><i class="fas fa-chevron-circle-right"></i></i> Herb Growing Guides</a>
+                <a style="margin-top:-3%" href="/allotment-recipes"><i class="fas fa-chevron-circle-right"></i></i> Allotment Recipes</a>
             </div>
             <div id="fourth-row">
-                <div id="col-left"><a href="/"><i class="far fa-calendar-alt"></i> Planning Tools</div></a>
-                <div id="col-right"><a href="/"><i class="fas fa-video"></i> Videos</div></a>
+                <div id="col-left"><a href="/planning-tools"><i class="far fa-calendar-alt"></i> Planning Tools</div></a>
+                <div id="col-right"><a href="/videos"><i class="fas fa-video"></i> Videos</div></a>
             </div>
             <div id="fifth-row">
-                <div id="col-left"><a href="/"><i class="fas fa-camera"></i> Photo Gallery</div></a>
-                <div id="col-right"><a href="/"><i class="fas fa-pen"></i> Blog</div></a>
+                <div id="col-left"><a href="/photo-gallery"><i class="fas fa-camera"></i> Photo Gallery</div></a>
+                <div id="col-right"><a href="/blog"><i class="fas fa-pen"></i> Blog</div></a>
             </div>
             <div id="sixth-row">
                 <div id="col-left"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a>
-                <div id="col-right"><a href="/"><i class="fas fa-copy"></i> Policies</div></a>
+                <div id="col-right"><a href="/policies"><i class="fas fa-copy"></i> Policies</div></a>
             </div>
 
     </div>
@@ -489,7 +502,7 @@ body {
 
     <div id="tablet-desktop-logo">
 
-    <img style="height:40px" src="/images/uploads/allotment-book-logo.svg" alt="allotment-book-logo"/>
+    <a href="/"><img style="height:40px" src="/images/uploads/allotment-book-logo.svg" alt="allotment-book-logo"/></a>
 
     </div>
     
@@ -502,26 +515,30 @@ body {
 
 </header>
 
-<div id="content-container">
-
+    <div id="content-container">
         <div id="leftnav">
             <nav id="non-mobile">
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Shop</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Account</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-chevron-circle-right"></i> Introduction</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Allotment Starter Guides</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Vegetable Growing Guides</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Fruit Growing Guides</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Herb Growing Guides</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Allotment Recipes</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Planning Tools</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Videos</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Photo Gallery</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Blog</div></a></div>
-    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-shopping-bag"></i> Policies</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/"><i class="fas fa-home"></i> Home</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/shop"><i class="fas fa-shopping-bag"></i> Shop</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/subscriptions"><i class="fas fa-power-off"></i> Account</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/book-contents"><i class="fas fa-book-open"></i> Book Contents</div></a></div>
+    <div id="book-indent">
+    <div id="row"><div id="nav-elements"><a href="/introduction"><i class="fas fa-chevron-circle-right"></i> Introduction</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/allotment-starter-guides"><i class="fas fa-chevron-circle-right"></i> Allotment Starter Guides</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/vegeteble-growing-guides"><i class="fas fa-chevron-circle-right"></i> Vegetable Growing Guides</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/fruit-growing-guides"><i class="fas fa-chevron-circle-right"></i> Fruit Growing Guides</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/herb-growing-guides"><i class="fas fa-chevron-circle-right"></i> Herb Growing Guides</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/allotment-recipes"><i class="fas fa-chevron-circle-right"></i> Allotment Recipes</div></a></div>
+    </div>
+    <div id="row"><div id="nav-elements"><a href="/planning-tools"><i class="fas fa-calendar-alt"></i> Planning Tools</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/videos"><i class="fas fa-video"></i> Videos</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/photo-gallery"><i class="fas fa-camera"></i> Photo Gallery</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/blog"><i class="fas fa-pen"></i> Blog</div></a></div>
+    <div id="row"><div id="nav-elements"><a href="/policies"><i class="fas fa-copy"></i> Policies</div></a></div>
 </nav>
         </div>
 
+        
         <div id="sidebar">
             side
         </div>
@@ -557,18 +574,19 @@ body {
                             Nulla facilisi. Nullam ut lacinia massa, vitae tempor massa. Quisque in augue sem. Maecenas rhoncus lobortis magna, id scelerisque augue molestie id. Proin quis nulla libero. Cras nec augue id nunc maximus elementum. Donec eget nulla imperdiet mi sagittis eleifend at vitae nisi. In hac habitasse platea dictumst. Maecenas justo dolor, tincidunt sed viverra sit amet, vulputate vitae libero. Aliquam efficitur blandit consequat. Quisque varius vitae eros quis rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ante quam, tincidunt eu nisi euismod, tincidunt aliquam leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
                     </div>
-
-                
-                
-                <i class="fas fa-check-circle"></i>
                 
                 </main>
-            </div>
+        </div>
+  
+
+
+
     </div>
+
+    <footer id="footer"> h </footer>
 
     <script src="/js/open-nav.js"></script>
     <script src="/js/close-nav.js"></script>
-    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></link>
 
