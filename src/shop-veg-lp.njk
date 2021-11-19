@@ -1,12 +1,12 @@
 ---
-permalink: "shop/index.html"
-title: Seeds, Tools, Gifts, And Equipment | Allotment Book
-description: Find seeds, tools, gifts, and equipment for the home gardener or allotment holder
 layout: /layouts/pagetemplate.njk
+permalink: "shop/vegetables/index.html"
+title: "Vegetable Seeds And Plants | Allotment Book"
+description: "Find vegetable seeds and plants to grow at home or on an allotment"
 ---
-        
-        <div id="sidebar">
-            a new side
+
+     <div id="sidebar">
+            a new different side
         </div>
     
         <div id="main-column">
@@ -15,17 +15,19 @@ layout: /layouts/pagetemplate.njk
                     
                     <div id="content-heading">
                         <div id="breadcrumb-container">
-                            <div id="breadcrumb"><a href="/">Home</a></div><i class="fas fa-chevron-right"></i>
+                            <div id="breadcrumb"><a href="/shop">Shop</a></div><i class="fas fa-chevron-right"></i>
                         </div>
                     </div>
 
                     <div id="content-body">
 
-                        <h2>Browse Shop</h2>
+                        <h2>Browse Vegetables</h2>
                         
-                        {% for cats in varshopcats.cats %} 
-                        <li><a href='/shop/{{cats.shopcat}}'>{{ cats.shopcat | title }}</a></li>
+                        {% for cats in varveglp %} 
+                        <li><a href='/shop/{{ cats }}/all'>{{ cats | title }}</li></a>
                         {% endfor %}
+
+
 
                         <h4>Archive</h4>
 
@@ -52,6 +54,8 @@ layout: /layouts/pagetemplate.njk
                         {% call add(1, 2) -%}
                         The result is
                         {%- endcall %}
-                        </div> 
+
+                    </div> 
                 </main>
+
             </div>
